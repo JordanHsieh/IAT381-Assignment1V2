@@ -22,9 +22,25 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/questionTwo', {
+        templateUrl: 'views/questionTwo.html',
+        controller: 'QuestionTwoCtrl'
+      })
+      .when('/questionThree', {
+        templateUrl: 'views/questionThree.html',
+        controller: 'QuestionThreeCtrl'
+      })
+      .when('/questionFour', {
+        templateUrl: 'views/questionFour.html',
+        controller: 'QuestionFourCtrl'
+      })
+      .when('/questionFive', {
+        templateUrl: 'views/questionFive.html',
+        controller: 'QuestionFiveCtrl'
+      })
+      .when('/menu', {
+        templateUrl: 'views/menu.html',
+        controller: 'MenuCtrl'
       })
       .otherwise({
         redirectTo: '/'

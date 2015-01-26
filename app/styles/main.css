@@ -4,5 +4,20 @@
 
 .jumbotron {
   padding: 15px 15px;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
+}
+
+#btn-next, #btn-finish {
+  margin-bottom: 5px;
+  color: #337ab7;
+}
+
+
+/*menu.html*/
+#menu {
+  padding: 15px;
+}
+
+#pagination {
+  float: right;
 }
