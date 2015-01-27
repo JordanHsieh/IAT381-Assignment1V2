@@ -8,10 +8,9 @@
 	<div class="container">
 		<div layout="row">
 			<div class=" col-sm-12 col-xs-12"> 
-				<div class="container" id="menu">
-					<a href="#/main" class="btn btn-primary btn-lg btn-block" id="btn-makeQuiz">Make Quiz!</a>
-					<a href="#" class="btn btn-success btn-lg btn-block" id="btn-viewQuiz">View Quiz!</a>
-					<a href="#" class="btn btn-danger btn-lg btn-block" id="btn-doQuiz">Do Quiz!</a>
+				<div ng-repeat="button in buttons track by $index" class="container" id="menu">
+					<!-- <button ng-click="buttonClicked()" class="btn btn-primary btn-lg btn-block" id="btn-makeQuiz">{{button.name}}</button> -->
+					<md-button ng-click="buttonClicked()" class="md-raised md-primary btn-lg btn-block">{{button.name}}</md-button>
 					
 				</div>
 			</div>

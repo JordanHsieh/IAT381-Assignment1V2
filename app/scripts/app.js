@@ -8,8 +8,9 @@
  *
  * Main module of the application.
  */
-angular
+var APP = angular
   .module('myappApp', [
+    'ngMaterial',
     'ngAnimate',
     'ngMessages',
     'ngRoute',
@@ -21,6 +22,10 @@ angular
       .when('/', {
         templateUrl: 'views/menu.html',
         controller: 'MenuCtrl'
+      })
+      .when('/mainQuiz', {
+        templateUrl: 'views/mainQuiz.html',
+        controller: 'MainQuizCtrl'
       })
       .when('/questionTwo', {
         templateUrl: 'views/questionTwo.html',
@@ -38,10 +43,6 @@ angular
         templateUrl: 'views/questionFive.html',
         controller: 'QuestionFiveCtrl'
       })
-      .when('/main', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
       .when('/menuV2', {
         templateUrl: 'views/menuV2.html',
         controller: 'MenuV2Ctrl'
@@ -50,3 +51,11 @@ angular
         redirectTo: '/'
       });
   });
+
+  //keep some variables in the APP namespace
+
+  APP.results = [];
+
+  APP.questions = [];
+  APP.answers = [];
+
