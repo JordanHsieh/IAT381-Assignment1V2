@@ -19,8 +19,8 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/menu.html',
+        controller: 'MenuCtrl'
       })
       .when('/questionTwo', {
         templateUrl: 'views/questionTwo.html',
@@ -38,9 +38,13 @@ angular
         templateUrl: 'views/questionFive.html',
         controller: 'QuestionFiveCtrl'
       })
-      .when('/menu', {
-        templateUrl: 'views/menu.html',
-        controller: 'MenuCtrl'
+      .when('/main', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
+      })
+      .when('/menuV2', {
+        templateUrl: 'views/menuV2.html',
+        controller: 'MenuV2Ctrl'
       })
       .otherwise({
         redirectTo: '/'
