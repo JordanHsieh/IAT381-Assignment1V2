@@ -47,6 +47,10 @@ var APP = angular
         templateUrl: 'views/menuV2.html',
         controller: 'MenuV2Ctrl'
       })
+      .when('/mainQuizV2', {
+        templateUrl: 'views/mainQuizV2.html',
+        controller: 'MainQuizV2Ctrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -58,4 +62,3 @@ var APP = angular
 
   APP.questions = [];
   APP.answers = [];
-

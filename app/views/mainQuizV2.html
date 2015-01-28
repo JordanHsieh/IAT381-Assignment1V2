@@ -1,0 +1,69 @@
+<div class="jumbotron">
+  <h1>Hello, User!</h1>
+  <p class="lead">
+    <!-- <img src="images/yeoman.png" alt="I'm Yeoman"><br> -->
+    Ready To Make A Quiz?
+  </p>
+</div>
+
+
+<div ng-controller="MainQuizV2Ctrl" layout-sm="column">
+  <md-content layout-sm="column">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Question 1</div>
+        <form name="userForm">
+          <div layout-sm="column">
+            <md-input-container flex-sm>
+              <label>What is your question?</label>
+              <input ng-model="quiz.firstName">
+            </md-input-container>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </md-content>
+  <md-content layout-sm="column" id="choose">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Choose</div>
+        <div class="md-padding">
+          <md-radio-group ng-model="data.group1">
+            <md-radio-button value="A" aria-label="Answer A">A</md-radio-button>
+            <md-radio-button value="B" aria-label="Answer B">B</md-radio-button>
+            <md-radio-button value="C" aria-label="Answer C">C</md-radio-button>
+            <md-radio-button value="D" aria-label="Answer D">D</md-radio-button>
+          </md-radio-group>
+        </div> 
+      </div>
+    </div>
+
+  </md-content>
+
+  <md-content layout-sm="column" id="answers">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Answers</div>
+        <form name="quizForm">
+          <div class="md-padding">
+              <md-input-container flex-sm>
+                <label>Answer A</label>
+                <input ng-model="quiz.answer">
+              </md-input-container>
+              <md-input-container flex-sm>
+                <label>Answer B</label>
+                <input ng-model="quiz.answer">
+              </md-input-container>
+              <md-input-container flex-sm>
+                <label>Answer C</label>
+                <input ng-model="quiz.answer">
+              </md-input-container>
+              <md-input-container flex-sm>
+                <label>Answer D</label>
+                <input ng-model="quiz.answer">
+              </md-input-container>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </md-content>
+</div>
