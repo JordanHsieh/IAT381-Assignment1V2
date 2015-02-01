@@ -44,8 +44,8 @@ var APP = angular
         controller: 'MainQuizV3Ctrl'
       })
       .when('/quiz/:question', {
-        templateUrl : 'views/questions.html',
-        controller  : 'questionsController'
+        templateUrl : 'views/quiz.html',
+        controller  : 'QuizCtrl'
       })
       .otherwise({
         redirectTo: '/'

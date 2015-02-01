@@ -12,7 +12,7 @@ APP.controller('MenuCtrl', function ($scope) {
     $scope.buttons = [
       {
         name:'Make Quiz', 
-        loc:'#/mainQuiz'
+        loc:'#/createQuiz'
       },
       {
         name:'View Quiz', 

@@ -9,26 +9,26 @@
  */
 
 APP.controller('CreateQuizCtrl', function ($scope) {
-    $scope.buttons = [
+    $scope.questions = [
       {
         name:'Question 1', 
-        loc:'#/quiz/q1'
+        url:'#/quiz/q1'
       },
       {
         name:'Question 2', 
-        loc:'#/quiz/q2'
+        url:'#/quiz/q2'
       },
       {
         name:'Question 3', 
-        loc:'#/quiz/q3'
+        url:'#/quiz/q3'
       },
       {
         name:'Question 4', 
-        loc:'#/quiz/q4'
+        url:'#/quiz/q4'
       },
       {
         name:'Question 5', 
-        loc:'#/quiz/q5'
+        url:'#/quiz/q5'
       }
     ];
 
@@ -36,13 +36,22 @@ APP.controller('CreateQuizCtrl', function ($scope) {
     $scope.buttonClicked = function() {
     	console.log(this);
     	//this is the button element that was clicked, this.item will be the item in scope.buttons
-    	var button = this.button; //setTimeout will make it's own this variable so we need to store the button that was clicked
+    	var question = this.question; //setTimeout will make it's own this variable so we need to store the button that was clicked
     	
 		// APP.results.push(button);
 
     	setTimeout(function() {
-    		window.location = button.loc;
+    		window.location = question.url;
     	}, 400);
+    };
+
+    $scope.goBack = function() {
+      console.log(this);
+      //this is the button element that was clicked, this.item will be the item in scope.buttons
+
+      setTimeout(function() {
+        window.location = "#/menu";
+      }, 400);
     };
 
   });

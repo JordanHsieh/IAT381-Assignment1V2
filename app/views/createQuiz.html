@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron text-center">
   <h1>Hello, User!</h1>
   <p class="lead">
     <!-- <img src="images/yeoman.png" alt="I'm Yeoman"><br> -->
@@ -6,15 +6,31 @@
   </p>
 </div>
 
+<div class="row marketing">
+  <div class="container">
+    <div class="row">
+      <div class=" col-sm-12 col-xs-12"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">Your Quiz!</div>
+          <div class="panel-body">
 
-<div class="container">
-  <div layout="row">
-    <div class=" col-sm-12 col-xs-12"> 
-      <div ng-repeat="button in buttons track by $index" class="container" id="menu">
 
-        <md-button ng-click="buttonClicked()" class="md-primary md-raised btn-lg btn-block">{{button.name}}
+            <div ng-repeat="question in questions track by $index" class="container" id="menu">
+
+              <md-button ng-click="buttonClicked()" class="md-primary md-raised btn-lg btn-block">
+              <!-- <md-button class="md-primary md-raised btn-lg btn-block"> -->
+                {{question.name}}
+                <!-- <a href="{{question.url}}">{{question.name}}</a> -->
+              </md-button>
+
+            </div>
+          </div>
+        </div>
+
+        <md-button ng-click="goBack()" class="md-warn md-raised btn-lg btn-block">
+          Back
+          <!-- <a href="#/menu"> Back </a> -->
         </md-button>
-        
       </div>
     </div>
   </div>
