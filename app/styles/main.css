@@ -4,7 +4,7 @@
 
 .jumbotron {
   padding: 15px 15px;
-  margin-bottom: 5px;
+  margin-bottom: -5px;
 }
 
 #btn-next, #btn-finish {
@@ -20,8 +20,4 @@
 
 #pagination {
   float: right;
-}
-
-.md-container {
-  display: inline-block;
 }

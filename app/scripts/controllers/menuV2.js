@@ -23,5 +23,5 @@ APP.controller('MenuV2Ctrl', function($scope) {
   $scope.isDisabled = true;
   $scope.googleUrl = 'http://google.com';
 
-  console.log(APP.results);
+  // console.log(APP.results);
 });

@@ -1,0 +1,66 @@
+<div class="jumbotron">
+  <h1>Hello, User!</h1>
+  <p class="lead">
+    <!-- <img src="images/yeoman.png" alt="I'm Yeoman"><br> -->
+    Ready To Make A Quiz?
+  </p>
+
+</div>
+
+<div ng-repeat="quiz in quizzes">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-xs-12"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">Question {{$index + 1}}</div>
+          <div class="panel-body">
+            <div class="input-group">
+              <input ng-model="quiz.question" type="text" class="form-control" placeholder="What is your question" aria-describedby="basic-addon0">
+              <span class="input-group-addon" id="basic-addon0">?</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class=" col-sm-12 col-xs-12"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">Answers</div>
+          <div class="panel-body">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">
+                <input ng-model="quiz.radio" type="radio" name="optradio" id="option1" aria-label="...">
+              </span>
+              <input ng-model="quiz.answerA" type="text" class="form-control" placeholder="Write your answer here" aria-describedby="basic-addon2">
+            </div>
+
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">
+                <input ng-model="quiz.radio" type="radio" name="optradio" id="option1" aria-label="...">
+              </span>
+              <input ng-model="quiz.answerB" type="text" class="form-control" placeholder="Write your answer here" aria-describedby="basic-addon3">
+            </div>
+
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">
+                <input ng-model="quiz.radio" type="radio" name="optradio" id="option1" aria-label="...">
+              </span>
+              <input ng-model="quiz.answerC" type="text" class="form-control" placeholder="Write your answer here" aria-describedby="basic-addon4">
+            </div>
+
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">
+                <input ng-model="quiz.radio" type="radio" name="optradio" id="option1" aria-label="...">
+              </span>
+              <input ng-model="quiz.answerD" type="text" class="form-control" placeholder="Write your answer here" aria-describedby="basic-addon5">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+

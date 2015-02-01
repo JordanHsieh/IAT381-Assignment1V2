@@ -23,14 +23,18 @@
     </div>
 
   </md-content>
-  <md-content layout-sm="column" id="choose">
-    <div class="panel panel-primary">
+
+  <md-content layout-sm="row">
+    <div class="panel panel-primary" flex>
       <div class="panel-heading">Choose</div>
         <div class="md-padding">
-          <md-radio-group ng-model="data.group1">
+          <md-radio-group class="btn-group" ng-model="data.group1" >
             <md-radio-button value="A" aria-label="Answer A">A</md-radio-button>
+            <md-divider></md-divider>
             <md-radio-button value="B" aria-label="Answer B">B</md-radio-button>
+            <md-divider></md-divider>
             <md-radio-button value="C" aria-label="Answer C">C</md-radio-button>
+            <md-divider></md-divider>
             <md-radio-button value="D" aria-label="Answer D">D</md-radio-button>
           </md-radio-group>
         </div> 
@@ -39,26 +43,27 @@
 
   </md-content>
 
-  <md-content layout-sm="column" id="answers">
-    <div class="panel panel-primary">
+  <md-content layout-sm="row" id="answers">
+  <!-- flex="75" -->
+    <div class="panel panel-primary" flex>
       <div class="panel-heading">Answers</div>
         <form name="quizForm">
           <div class="md-padding">
               <md-input-container flex-sm>
                 <label>Answer A</label>
-                <input ng-model="quiz.answer">
+                <input ng-model="quiz.answerA">
               </md-input-container>
               <md-input-container flex-sm>
                 <label>Answer B</label>
-                <input ng-model="quiz.answer">
+                <input ng-model="quiz.answerB">
               </md-input-container>
               <md-input-container flex-sm>
                 <label>Answer C</label>
-                <input ng-model="quiz.answer">
+                <input ng-model="quiz.answerC">
               </md-input-container>
               <md-input-container flex-sm>
                 <label>Answer D</label>
-                <input ng-model="quiz.answer">
+                <input ng-model="quiz.answerD">
               </md-input-container>
           </div>
         </form>
@@ -66,4 +71,22 @@
     </div>
 
   </md-content>
+</div>
+
+<div class="container">
+  <nav>
+    <ul id="pagination" class="pagination pagination-lg">
+      <!-- <li>
+        <a href="#/main" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li> -->
+      <li><a href="#/menu">Finish</a></li>
+      <li>
+        <a href="#/questionTwo" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>

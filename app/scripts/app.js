@@ -23,25 +23,13 @@ var APP = angular
         templateUrl: 'views/menu.html',
         controller: 'MenuCtrl'
       })
+      .when('/createQuiz', {
+        templateUrl: 'views/createQuiz.html',
+        controller: 'CreateQuizCtrl'
+      })
       .when('/mainQuiz', {
         templateUrl: 'views/mainQuiz.html',
         controller: 'MainQuizCtrl'
-      })
-      .when('/questionTwo', {
-        templateUrl: 'views/questionTwo.html',
-        controller: 'QuestionTwoCtrl'
-      })
-      .when('/questionThree', {
-        templateUrl: 'views/questionThree.html',
-        controller: 'QuestionThreeCtrl'
-      })
-      .when('/questionFour', {
-        templateUrl: 'views/questionFour.html',
-        controller: 'QuestionFourCtrl'
-      })
-      .when('/questionFive', {
-        templateUrl: 'views/questionFive.html',
-        controller: 'QuestionFiveCtrl'
       })
       .when('/menuV2', {
         templateUrl: 'views/menuV2.html',
@@ -51,6 +39,14 @@ var APP = angular
         templateUrl: 'views/mainQuizV2.html',
         controller: 'MainQuizV2Ctrl'
       })
+      .when('/mainQuizV3', {
+        templateUrl: 'views/mainQuizV3.html',
+        controller: 'MainQuizV3Ctrl'
+      })
+      .when('/quiz/:question', {
+        templateUrl : 'views/questions.html',
+        controller  : 'questionsController'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -58,7 +54,4 @@ var APP = angular
 
   //keep some variables in the APP namespace
 
-  APP.results = [];
-
-  APP.questions = [];
-  APP.answers = [];
+  APP.quiz = []; //empty until we go to make quiz and save first question

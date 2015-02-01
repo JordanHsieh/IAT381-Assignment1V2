@@ -2,25 +2,33 @@
 
 /**
  * @ngdoc function
- * @name myappApp.controller:MenuCtrl
+ * @name myappApp.controller:CreateQuizCtrl
  * @description
- * # MenuCtrl
+ * # CreateQuizCtrl
  * Controller of the myappApp
  */
 
-APP.controller('MenuCtrl', function ($scope) {
+APP.controller('CreateQuizCtrl', function ($scope) {
     $scope.buttons = [
       {
-        name:'Make Quiz', 
-        loc:'#/mainQuiz'
+        name:'Question 1', 
+        loc:'#/quiz/q1'
       },
       {
-        name:'View Quiz', 
-        loc:'#/viewQuiz'
+        name:'Question 2', 
+        loc:'#/quiz/q2'
       },
       {
-        name:'Do Quiz', 
-        loc:'#/doQuiz'
+        name:'Question 3', 
+        loc:'#/quiz/q3'
+      },
+      {
+        name:'Question 4', 
+        loc:'#/quiz/q4'
+      },
+      {
+        name:'Question 5', 
+        loc:'#/quiz/q5'
       }
     ];
 

@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <h1>Hello, User!</h1>
+  <p class="lead">
+    <!-- <img src="images/yeoman.png" alt="I'm Yeoman"><br> -->
+    Pick your Question to Create!
+  </p>
+</div>
+
+
+<div class="container">
+  <div layout="row">
+    <div class=" col-sm-12 col-xs-12"> 
+      <div ng-repeat="button in buttons track by $index" class="container" id="menu">
+
+        <md-button ng-click="buttonClicked()" class="md-primary md-raised btn-lg btn-block">{{button.name}}
+        </md-button>
+        
+      </div>
+    </div>
+  </div>
+</div>
