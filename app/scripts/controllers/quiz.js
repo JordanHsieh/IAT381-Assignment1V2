@@ -70,8 +70,8 @@ APP.controller('QuizCtrl', function($scope, $route) {
 
       if(count === 1){
 
-        APP.questions.push({id:question.id, question:question.question})
-        APP.answers.push({id:question.id, answers:question.answers, correct:question.correct})
+        APP.questions.push({id:question.id, question:question.question});
+        APP.answers.push({id:question.id, answers:question.answers, correct:question.correct});
         count++;
       }
 
