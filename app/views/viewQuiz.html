@@ -15,14 +15,15 @@
 			  	</a>
 		        <div class="panel panel-primary">
 		          	<div class="panel-heading">
-			          	<accordion-group heading="{{question.id}}" ng-repeat="question in questions">
-					      {{question.question}}
-					    </accordion-group>
+			          	
+					      {{viewQuestions.id}}
+					    
 		          	</div>
 
 
-					    <div class="panel-body">Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					    </div>
+				    <div class="panel-body">
+							{{viewQuestions.question}}
+			  		</div>
 
 		        </div>
 
@@ -30,7 +31,7 @@
 		          Back
 		        </md-button>
 
-		        <pre><code>{{ isCollapsed }}</code></pre>
+		        <pre>q = {{question | json}}</pre></pre>
 	      	</div>
 	    </div>
   	</div>

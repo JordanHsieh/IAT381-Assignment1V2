@@ -5,42 +5,30 @@ var APP = angular.module('myappApp');
 APP.controller('QuizCtrl', function($scope, $route) {
   var questions = {
     q1: {
-      question: '',
+      // question: '',
+      // id: 'Question 1',
+      // answers: ['', '', '', ''],
+      // correct: ''
+      question: 'What is your name',
       id: 'Question 1',
-      // answerA: '',
-      // answerB: '',
-      // answerC: '',
-      // answerD: '',
-      answers: ['', '', '', ''],
-      correct: ''
+      answers: ['Jordan', 'Jackson', 'Jennifer', 'Joanna'],
+      correct: '0'
     },
     q2: {
       question: '',
       id: 'Question 2',
-      // answerA: '',
-      // answerB: '',
-      // answerC: '',
-      // answerD: '',
       answers: ['', '', '', ''],
       correct: ''
     },
     q3: {
       question: '',
       id: 'Question 3',
-      // answerA: '',
-      // answerB: '',
-      // answerC: '',
-      // answerD: '',
       answers: ['', '', '', ''],
       correct: ''
     },
     q4: {
       question: '',
       id: 'Question 4',
-      // answerA: '',
-      // answerB: '',
-      // answerC: '',
-      // answerD: '',
       answers: ['', '', '', ''],
       correct: ''
     },
