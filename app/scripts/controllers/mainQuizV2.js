@@ -1,5 +1,7 @@
 'use strict';
 
+var APP = angular.module('myappApp');
+
 APP.controller('MainQuizV2Ctrl', function($scope) {
   $scope.quiz = {
     answer: ''

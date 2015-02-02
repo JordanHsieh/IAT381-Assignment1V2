@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" ng-app="myappApp">
+<html class="no-js">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body>
+  <body ng-app="myappApp">
 
 
     <header class="navbar-inverse" role="banner">
@@ -35,9 +35,8 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#/createQuiz">Make Quiz <span class="sr-only">(current)</span></a></li>
-                <li class="disabled"><a href="#/menu">View Quiz</a></li>
-                <li class="disabled"><a href="#/menu">Do Quiz</a></li>
-                <li><a href="#/menuV2">Material Menu</a></li>
+                <li class="disabled"><a href="#/viewQuiz">View Quiz</a></li>
+<!--                 <li class="disabled"><a href="#/menu">Do Quiz</a></li> -->
               </ul>
             </div>
           </div>
@@ -53,7 +52,7 @@
 
 
       <div class="footer">
-        <p>Developed by Jordan and Wesley</p>
+        <p>Developed by Jordan</p>
       </div>
     </div>
 
@@ -77,6 +76,7 @@
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/hammerjs/hammer.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -86,8 +86,8 @@
         <script src="scripts/controllers/createQuiz.js"></script>
         <script src="scripts/controllers/mainQuiz.js"></script>
         <script src="scripts/controllers/quiz.js"></script>
-        <script src="scripts/controllers/mainQuizV2.js"></script>
-        <script src="scripts/controllers/mainQuizV3.js"></script>
+        <script src="scripts/controllers/viewQuiz.js"></script>
+        
         
         <!-- endbuild -->
 </body>

@@ -1,5 +1,7 @@
 'use strict';
 
+var APP = angular.module('myappApp');
+
 
 APP.controller('MainQuizV3Ctrl', function( $scope ) {
     

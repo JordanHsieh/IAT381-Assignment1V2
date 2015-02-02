@@ -11,13 +11,15 @@
 				<div class="panel panel-primary">
 		          	<div class="panel-heading">Your Quiz!</div>
 	        			<div class="panel-body">
-							<div ng-repeat="button in buttons track by $index" class="container" id="menu">
+							<div ng-repeat="button in buttons" class="container" id="menu">
 								<!-- <button ng-click="buttonClicked()" class="btn btn-primary btn-lg btn-block" id="btn-makeQuiz">{{button.name}}</button> -->
 								<md-button ng-click="buttonClicked()" class="md-primary md-raised btn-lg btn-block">{{button.name}}</md-button>
 								
 							</div>
 				  		</div>
 				  	</div>
+				  			<md-button ng-click="buttonClick()" class="md-warn md-raised btn-lg btn-block">YO
+							</md-button>
 				</div>
 			</div>
 		</div>

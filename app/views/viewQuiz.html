@@ -1,0 +1,37 @@
+<div class="jumbotron text-center">
+  <h1>Hello, User!</h1>
+  <p class="lead">
+    <!-- <img src="images/yeoman.png" alt="I'm Yeoman"><br> -->
+    Let's View Our Questions!
+  </p>
+</div>
+
+<div class="row marketing">
+  	<div class="container">
+	    <div class="row">
+	      	<div class=" col-sm-12 col-xs-12"> 
+	          	<a href="" class="btn btn-primary" ng-click="isCollapsed = !isCollapsed">
+					    Toggle Panel
+			  	</a>
+		        <div class="panel panel-primary">
+		          	<div class="panel-heading">
+			          	<accordion-group heading="{{question.id}}" ng-repeat="question in questions">
+					      {{question.question}}
+					    </accordion-group>
+		          	</div>
+
+
+					    <div class="panel-body">Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					    </div>
+
+		        </div>
+
+		        <md-button ng-click="goBack()" class="md-warn md-raised btn-lg btn-block">
+		          Back
+		        </md-button>
+
+		        <pre><code>{{ isCollapsed }}</code></pre>
+	      	</div>
+	    </div>
+  	</div>
+</div>

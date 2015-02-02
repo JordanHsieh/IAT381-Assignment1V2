@@ -8,15 +8,7 @@
  * Controller of the myappApp
  */
 
-// angular.module('myappApp')
-//   .controller('MenuV2Ctrl', function ($scope) {
-//     $scope.awesomeThings = [
-//       'HTML5 Boilerplate',
-//       'AngularJS',
-//       'Karma'
-//     ];
-//   });
-
+var APP = angular.module('myappApp');
 
 APP.controller('MenuV2Ctrl', function($scope) {
   $scope.title1 = 'Button';

@@ -8,13 +8,11 @@
  * Controller of the myappApp
  */
 
-var APP = angular.module('myappApp');
-
-APP.controller('MainQuizCtrl', function ($scope) {
+var APP = angular.module('myappApp', []);
+APP.controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-
   });

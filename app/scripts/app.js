@@ -15,7 +15,8 @@ var APP = angular
     'ngMessages',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -27,25 +28,13 @@ var APP = angular
         templateUrl: 'views/createQuiz.html',
         controller: 'CreateQuizCtrl'
       })
-      .when('/mainQuiz', {
-        templateUrl: 'views/mainQuiz.html',
-        controller: 'MainQuizCtrl'
-      })
-      .when('/menuV2', {
-        templateUrl: 'views/menuV2.html',
-        controller: 'MenuV2Ctrl'
-      })
-      .when('/mainQuizV2', {
-        templateUrl: 'views/mainQuizV2.html',
-        controller: 'MainQuizV2Ctrl'
-      })
-      .when('/mainQuizV3', {
-        templateUrl: 'views/mainQuizV3.html',
-        controller: 'MainQuizV3Ctrl'
-      })
       .when('/quiz/:question', {
         templateUrl : 'views/quiz.html',
         controller  : 'QuizCtrl'
+      })
+      .when('/viewQuiz', {
+        templateUrl : 'views/viewQuiz.html',
+        controller  : 'ViewQuizCtrl'
       })
       .otherwise({
         redirectTo: '/'
@@ -54,4 +43,6 @@ var APP = angular
 
   //keep some variables in the APP namespace
 
-  APP.quiz = []; //empty until we go to make quiz and save first question
+  APP.questions = []; //empty until we go to make quiz and save first question
+  APP.answers = [];
+

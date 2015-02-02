@@ -8,6 +8,8 @@
  * Controller of the myappApp
  */
 
+var APP = angular.module('myappApp');
+
 APP.controller('CreateQuizCtrl', function ($scope) {
     $scope.questions = [
       {
@@ -34,6 +36,7 @@ APP.controller('CreateQuizCtrl', function ($scope) {
 
 
     $scope.buttonClicked = function() {
+      console.log('Question button clicked');
     	console.log(this);
     	//this is the button element that was clicked, this.item will be the item in scope.buttons
     	var question = this.question; //setTimeout will make it's own this variable so we need to store the button that was clicked
@@ -50,7 +53,7 @@ APP.controller('CreateQuizCtrl', function ($scope) {
       //this is the button element that was clicked, this.item will be the item in scope.buttons
 
       setTimeout(function() {
-        window.location = "#/menu";
+        window.location = '#/menu';
       }, 400);
     };
 
