@@ -1,3 +1,8 @@
+// question: 'What is your name',
+// id: 'Question 1',
+// answers: ['Jordan', 'Jackson', 'Jennifer', 'Joanna'],
+// correct: '0'
+
 'use strict';
 
 var APP = angular.module('myappApp');
@@ -7,13 +12,9 @@ APP.controller('QuizCtrl', function($scope, $route) {
 
   var questions = {
     q1: {
-      // question: '',
-      // id: 'Question 1',
-      // answers: ['', '', '', ''],
-      // correct: ''
-      question: 'What is your name',
+      question: 'Are we all going to pass this course?',
       id: 'Question 1',
-      answers: ['Jordan', 'Jackson', 'Jennifer', 'Joanna'],
+      answers: ['Hopefully', 'NOPE!', 'Of Course!', 'Ehhh'],
       correct: '0'
     },
     q2: {
@@ -37,10 +38,6 @@ APP.controller('QuizCtrl', function($scope, $route) {
     q5: {
       question: '',
       id: 'Question 5',
-      // answerA: '',
-      // answerB: '',
-      // answerC: '',
-      // answerD: '',
       answers: ['', '', '', ''],
       correct: ''
     }
@@ -53,7 +50,9 @@ APP.controller('QuizCtrl', function($scope, $route) {
   
   //change this
   var question = $route.current.params.question;
- $scope.question = questions[question];
+  $scope.question = questions[question];
+
+  var questionCount = 0;
 
   //to this
   // var id = $route.current.params.id;
@@ -84,12 +83,21 @@ APP.controller('QuizCtrl', function($scope, $route) {
         // APP.answers.push({id:question.id, answers:question.answers, correct:question.correct});
         APP.questions.push({id:question.id, question:question.question, answers:question.answers, correct:question.correct});
         count++;
+        questionCount++;
+        $scope.questionCount = questionCount;
+        APP.questionCount = $scope.questionCount;
+        console.log(APP.questionCount);
       }
 
       console.log(APP.questions);
       // console.log(APP.answers);
 
       $scope.master = angular.copy(question);
+
+      setTimeout(function() {
+        window.location = '#/createQuiz';
+      }, 400);
+
   };
 
   $scope.back = function() {

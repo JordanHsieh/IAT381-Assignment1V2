@@ -17,7 +17,7 @@ APP.controller('MenuCtrl', function ($scope) {
         loc:'#/createQuiz'
       },
       {
-        name:'View Quiz', 
+        name:'Preview Quiz', 
         loc:'#/viewQuiz'
       }
     ];

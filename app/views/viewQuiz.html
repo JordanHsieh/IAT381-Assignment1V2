@@ -2,7 +2,7 @@
   <h1>Hello, User!</h1>
   <p class="lead">
     <!-- <img src="images/yeoman.png" alt="I'm Yeoman"><br> -->
-    Let's View Our Questions!
+    Let's Preview Our Questions!
   </p>
 </div>
 
@@ -10,15 +10,8 @@
   	<div class="container">
 	    <div class="row">
 	      	<div class=" col-sm-12 col-xs-12"> 
-				
 
-<!-- 				<accordion close-others="oneAtATime">
-				<accordion-group heading="{{question.id}} : {{question.question}}" ng-repeat="question in questions">
-			      {{question.answers}}
-			    </accordion-group>
-				</accordion> -->
-
-		        <div ng-repeat="question in questions"class="panel panel-primary">
+		        <div ng-repeat="question in questions track by $index" class="panel panel-primary">
 		          	<div class="panel-heading">
 					      {{question.id}} : {{question.question}}
 
@@ -30,9 +23,9 @@
 								<b>Possible Answers:</b>
 								<br>
 								<div ng-repeat="answer in question.answers">
-								<label>
-								{{answer}}
-								</label>
+									<label>
+									{{answer}}
+									</label>
 								</div>
 								
 								<br>
