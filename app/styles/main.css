@@ -3,17 +3,17 @@
 }
 
 .jumbotron {
-  padding: 15px 15px;
-  margin-bottom: 10px;
+  	padding: 15px 15px;
+  	margin-bottom: 10px;
 }
 
 #btn-next, #btn-finish {
-  margin-bottom: 5px;
-  color: #337ab7;
+	margin-bottom: 5px;
+  	color: #337ab7;
 }
 
 
 /*menu.html*/
 #menu {
-  padding: 15px;
+  	padding: 15px;
 }

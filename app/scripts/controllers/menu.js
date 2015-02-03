@@ -19,10 +19,6 @@ APP.controller('MenuCtrl', function ($scope) {
       {
         name:'View Quiz', 
         loc:'#/viewQuiz'
-      },
-      {
-        name:'Do Quiz', 
-        loc:'#/doQuiz'
       }
     ];
 
@@ -41,8 +37,8 @@ APP.controller('MenuCtrl', function ($scope) {
     	}, 400);
     };
 
-    $scope.buttonClick = function() {
-      console.log('TEST TEST Button Clicked');
-    };
+    // $scope.buttonClick = function() {
+    //   console.log('TEST TEST Button Clicked');
+    // };
 
   });

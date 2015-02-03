@@ -3,6 +3,8 @@
 var APP = angular.module('myappApp');
 
 APP.controller('QuizCtrl', function($scope, $route) {
+  //local questions? nope
+
   var questions = {
     q1: {
       // question: '',
@@ -44,27 +46,48 @@ APP.controller('QuizCtrl', function($scope, $route) {
     }
   };
 
-  console.log($route);
+  
 
+  console.log($route.current);
+
+  
+  //change this
   var question = $route.current.params.question;
-  $scope.question = questions[question];
+ $scope.question = questions[question];
+
+  //to this
+  // var id = $route.current.params.id;
+  // $scope.question = APP.questions[id];
 
   var count = 1;
 
   $scope.save = function(question) {
-      console.log(this);
+
+
+      console.log($scope.question);
+      // console.log(APP.questions[id]);
+
+      //any model changes to the question on
+      //the current scope will be copied to
+      //the global APP.questions so they can
+      //be used in the preview view / controller
+      // APP.question[id] = $scope.questions;
+
+
+      // return;
       //this is the button element that was clicked, this.item will be the item in scope.buttons
       // console.log(question);
 
       if(count === 1){
 
-        APP.questions.push({id:question.id, question:question.question});
-        APP.answers.push({id:question.id, answers:question.answers, correct:question.correct});
+        // APP.questions.push({id:question.id, question:question.question});
+        // APP.answers.push({id:question.id, answers:question.answers, correct:question.correct});
+        APP.questions.push({id:question.id, question:question.question, answers:question.answers, correct:question.correct});
         count++;
       }
 
       console.log(APP.questions);
-      console.log(APP.answers);
+      // console.log(APP.answers);
 
       $scope.master = angular.copy(question);
   };

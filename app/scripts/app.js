@@ -10,13 +10,13 @@
  */
 var APP = angular
   .module('myappApp', [
+    'ui.bootstrap',
     'ngMaterial',
     'ngAnimate',
     'ngMessages',
     'ngRoute',
     'ngSanitize',
-    'ngTouch',
-    'ui.bootstrap'
+    'ngTouch'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -45,4 +45,3 @@ var APP = angular
 
   APP.questions = []; //empty until we go to make quiz and save first question
   APP.answers = [];
-

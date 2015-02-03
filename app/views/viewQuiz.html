@@ -10,28 +10,44 @@
   	<div class="container">
 	    <div class="row">
 	      	<div class=" col-sm-12 col-xs-12"> 
-	          	<a href="" class="btn btn-primary" ng-click="isCollapsed = !isCollapsed">
-					    Toggle Panel
-			  	</a>
-		        <div class="panel panel-primary">
+				
+
+<!-- 				<accordion close-others="oneAtATime">
+				<accordion-group heading="{{question.id}} : {{question.question}}" ng-repeat="question in questions">
+			      {{question.answers}}
+			    </accordion-group>
+				</accordion> -->
+
+		        <div ng-repeat="question in questions"class="panel panel-primary">
 		          	<div class="panel-heading">
-			          	
-					      {{viewQuestions.id}}
-					    
+					      {{question.id}} : {{question.question}}
+
 		          	</div>
-
-
-				    <div class="panel-body">
-							{{viewQuestions.question}}
+					
+					<div >
+					    <div class="panel-body">
+							<p>
+								<b>Possible Answers:</b>
+								<br>
+								<div ng-repeat="answer in question.answers">
+								<label>
+								{{answer}}
+								</label>
+								</div>
+								
+								<br>
+								<label>
+								Correct: {{question.answers[question.correct]}}
+								</label>
+							</p>
+				  		</div>
 			  		</div>
 
 		        </div>
 
-		        <md-button ng-click="goBack()" class="md-warn md-raised btn-lg btn-block">
+	        	<md-button ng-click="backToMenu()" class="md-warn md-raised btn-lg btn-block">
 		          Back
 		        </md-button>
-
-		        <pre>q = {{question | json}}</pre></pre>
 	      	</div>
 	    </div>
   	</div>
