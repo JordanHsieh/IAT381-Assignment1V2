@@ -19,38 +19,36 @@ APP.controller('QuizCtrl', function($scope, $route) {
     },
     q2: {
       question: '',
-      id: 'Question 2',
-      answers: ['', '', '', ''],
-      correct: ''
+      id: 'Question 2'
     },
     q3: {
       question: '',
-      id: 'Question 3',
-      answers: ['', '', '', ''],
-      correct: ''
+      id: 'Question 3'
     },
     q4: {
       question: '',
-      id: 'Question 4',
-      answers: ['', '', '', ''],
-      correct: ''
+      id: 'Question 4'
     },
     q5: {
       question: '',
-      id: 'Question 5',
-      answers: ['', '', '', ''],
-      correct: ''
+      id: 'Question 5'
     }
   };
 
-  
+  $scope.pageClass = 'quiz';
 
   console.log($route.current);
 
   
   //change this
   var question = $route.current.params.question;
+
+  if(APP.questions.length == 0)
+  {
+    $scope.question = APP.questions[question];
+  }
   $scope.question = questions[question];
+  
 
   var questionCount = 0;
 
@@ -60,36 +58,32 @@ APP.controller('QuizCtrl', function($scope, $route) {
 
   var count = 1;
 
+  $scope.progressValue = APP.progressValue;
+
   $scope.save = function(question) {
 
+      // console.log($scope.question);
 
-      console.log($scope.question);
-      // console.log(APP.questions[id]);
+      if(question.question.length === 0)
+      {
+        console.log("empty question");
+      }
+      else
+      {
+        if(count === 1){
 
-      //any model changes to the question on
-      //the current scope will be copied to
-      //the global APP.questions so they can
-      //be used in the preview view / controller
-      // APP.question[id] = $scope.questions;
-
-
-      // return;
-      //this is the button element that was clicked, this.item will be the item in scope.buttons
-      // console.log(question);
-
-      if(count === 1){
-
-        // APP.questions.push({id:question.id, question:question.question});
-        // APP.answers.push({id:question.id, answers:question.answers, correct:question.correct});
-        APP.questions.push({id:question.id, question:question.question, answers:question.answers, correct:question.correct});
-        count++;
-        questionCount++;
-        $scope.questionCount = questionCount;
-        APP.questionCount = $scope.questionCount;
-        console.log(APP.questionCount);
+          APP.questions.push({id:question.id, question:question.question, answers:question.answers, correct:question.correct});
+          $scope.progressValue = $scope.progressValue + 1;
+          APP.progressValue = $scope.progressValue;
+          count++;
+          questionCount++;
+          $scope.questionCount = questionCount;
+          APP.questionCount = $scope.questionCount;
+          console.log(APP.questionCount);
+        }
       }
 
-      console.log(APP.questions);
+      // console.log(APP.questions);
       // console.log(APP.answers);
 
       $scope.master = angular.copy(question);

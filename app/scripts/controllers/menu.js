@@ -22,6 +22,8 @@ APP.controller('MenuCtrl', function ($scope) {
       }
     ];
 
+    $scope.pageClass = 'menu';
+
 
     $scope.buttonClicked = function() {
     	// console.log(this);

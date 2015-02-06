@@ -12,7 +12,7 @@
 	      	<div class=" col-sm-12 col-xs-12"> 
 
 		        <div ng-repeat="question in questions track by $index" class="panel panel-primary">
-		          	<div class="panel-heading">
+		          	<div class="panel-heading" ng-click="open()">
 					      {{question.id}} : {{question.question}}
 
 		          	</div>
@@ -21,14 +21,14 @@
 					    <div class="panel-body">
 							<p>
 								<b>Possible Answers:</b>
-								<br>
 								<div ng-repeat="answer in question.answers">
 									<label>
-									{{answer}}
+									<ul>
+										<li>{{answer}}</li>
+									</ul>
 									</label>
 								</div>
 								
-								<br>
 								<label>
 								Correct: {{question.answers[question.correct]}}
 								</label>

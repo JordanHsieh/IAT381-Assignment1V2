@@ -7,8 +7,16 @@
   	margin-bottom: 10px;
 }
 
+.panel {
+	margin-bottom: 10px;
+}
+
 
 /*menu.html*/
 #menu {
   	padding: 15px;
+}
+
+#progressBar {
+	margin-bottom: 5px;
 }

@@ -34,11 +34,14 @@ APP.controller('CreateQuizCtrl', function ($scope) {
       }
     ];
 
+    $scope.progressValue = APP.progressValue;
+    $scope.max = 5;
+
 
     $scope.buttonClicked = function() {
-      console.log('Question button clicked');
+      // console.log('Question button clicked');
     	console.log(this);
-    	//this is the button element that was clicked, this.item will be the item in scope.buttons
+    	//this is the button e lement that was clicked, this.item will be the item in scope.buttons
     	var question = this.question; //setTimeout will make it's own this variable so we need to store the button that was clicked
     	
 		// APP.results.push(button);

@@ -45,3 +45,4 @@ var APP = angular
 
   APP.questions = []; //empty until we go to make quiz and save first question
   APP.answers = [];
+  APP.progressValue = 0;
