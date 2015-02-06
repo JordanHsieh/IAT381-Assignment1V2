@@ -43,7 +43,7 @@ APP.controller('QuizCtrl', function($scope, $route) {
   //change this
   var question = $route.current.params.question;
 
-  if(APP.questions.length == 0)
+  if(APP.questions.length === 0)
   {
     $scope.question = APP.questions[question];
   }
@@ -66,7 +66,7 @@ APP.controller('QuizCtrl', function($scope, $route) {
 
       if(question.question.length === 0)
       {
-        console.log("empty question");
+        console.log('empty question');
       }
       else
       {

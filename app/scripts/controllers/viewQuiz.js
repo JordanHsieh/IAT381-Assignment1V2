@@ -10,7 +10,7 @@
 
 var APP = angular.module('myappApp');
 
-APP.controller('ViewQuizCtrl', function ($scope, $modal) {
+APP.controller('ViewQuizCtrl', function ($scope) {
 
   $scope.pageClass = 'page-viewQuiz';
 
